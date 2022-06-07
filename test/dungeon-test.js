@@ -25,7 +25,7 @@ describe('Dungeon', function() {
   it('should be a function', function() {
     assert.isFunction(Dungeon)
   });
-  
+
   it("should have no treasure", function() {
     var dungeon =  new Dungeon()
 
@@ -33,13 +33,13 @@ describe('Dungeon', function() {
   })
 
   it("should have a healthy player by default", function() {
-    var dungeon = new Dungeon()  
+    var dungeon = new Dungeon()
 
     assert.equal(dungeon.playerStatus, "Healthy")
   })
 
   it("should have no discovered rooms", function() {
-    var dungeon = new Dungeon()  
+    var dungeon = new Dungeon()
 
     assert.equal(dungeon.rooms.length, 0)
   })
