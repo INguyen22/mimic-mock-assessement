@@ -7,20 +7,22 @@ class Dungeon {
     this.rooms = []
   }
   openRoom(boolean) {
-    this.rooms.push({chest:new Chest(boolean)})
+    var chest = {chest:new Chest(boolean)}
+    //console.log(chest)
+    return this.rooms.push(chest)
   }
   openChests() {
-    console.log('room', this.rooms)
-  for (var i = 0; i < this.rooms.length; i++) {
-    if (this.rooms[i].chest.isMimic) {
-    this.playerStatus = 'Wounded'
-    this.treasure = 0
+    for (var i = 0; i < this.rooms.length; i++) {
+          console.log('room', this.rooms[1].chest.isMimic)
+      if (this.rooms[i].chest.isMimic === true) {
+        this.playerStatus = 'Wounded'
+        this.treasure = 0
       }
-    else {
-       this.treasure += 10
-        }
+      if (!this.rooms[i].chest.isMimic) {
+        this.treasure = this.treasure + 10
       }
     }
   }
+}
 
 module.exports = Dungeon;

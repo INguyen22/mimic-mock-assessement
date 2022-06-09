@@ -1,6 +1,6 @@
 class Chest {
-  constructor(boolean) {
-    this.isMimic = boolean || false
+  constructor(chest) {
+    this.isMimic =  chest || false
   }
 }
 
